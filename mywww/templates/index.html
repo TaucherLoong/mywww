@@ -1,0 +1,18 @@
+<!--index.html-->
+{% extends 'base.html' %}
+{% block title %} 松柏数据分析{% endblock %}
+{% block logoname %}松柏数据分析{% endblock %}
+{% block headmessage %}
+<h3 style ='font-family：roman;'>Web Essay List</h3>
+{% endblock %}
+{% block content %}
+
+
+
+    {% for post in posts %}
+    <p style = 'font-family:微软雅黑; font-size:14pt; font-weight:bold;'>
+    <a href='/post/{{post.slug}}'> {{post.title}}</a>
+    </p>
+    {% endfor %}
+
+{% endblock %}
